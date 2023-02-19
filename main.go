@@ -41,27 +41,27 @@ func main() {
 	flag.Parse()
 
 	if out == "C" && isFlagPassed("F") {
-		return CelsiusToFahrenheit
+		fmt.Println( value "C er " + CelsiusToFahrenheit(fahr) + "F")
 	}
 
 	if out == "F" && isFlagPassed("C") {
-		return FahrenheitToCelsius
+		fmt.Println( value "F er " + FahrenheitToCelsius(cels) + "C")
 	}
 
 	if out == "C" && isFlagPassed("K") {
-		return CelsiusToKelvin
+		fmt.Println( value "C er " + CelsiusToKelvin(kelv) + "K")
 	}
 
 	if out == "K" && isFlagPassed("C") {
-		return KelvinToCelsius
+		fmt.Println( value "K er " + KelvinToCelsius(cels) + "C")
 	}
 
 	if out == "F" && isFlagPassed("K") {
-		return FahrenheitToKelvin
+		fmt.Println(value "F er " + FahrenheitToKelvin(kelv) + "K")
 	}
 
 	if out == "K" && isFlagPassed("F") {
-		return KelvinToFahrenheit
+		fmt.Println(value "K er " + KelvinToFahrenheit(fahr) + "F")
 	}
   	/**
 	    Her må logikken for flaggene og kall til funksjoner fra conv og funfacts

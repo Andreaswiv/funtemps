@@ -1,9 +1,11 @@
 package main
+
 import (
 	"flag"
 	"fmt"
+	"is105:github.com:andreaswiv/funtemps/conv"
 )
-import conv()
+
 // Definerer flag-variablene i hoved-"scope"
 var fahr float64
 var cels float64
@@ -24,8 +26,8 @@ func init() {
 
 	// Definerer og initialiserer flagg-variablene
 	flag.Float64Var(&fahr, "F", 0.0, "temperatur i grader fahrenheit")
-	flag.Float64Var(&cels, "C", 0.0 , "temperatur i grader celsius")
-	flag.Float64Var(&kelv, "K", 0.0 , "temperatur i grader kelvin")
+	flag.Float64Var(&cels, "C", 0.0, "temperatur i grader celsius")
+	flag.Float64Var(&kelv, "K", 0.0, "temperatur i grader kelvin")
 	// Du må selv definere flag-variablene for "C" og "K"
 	flag.StringVar(&out, "out", "C", "beregne temperatur i C - celsius, F - farhenheit, K- Kelvin")
 	flag.StringVar(&funfacts, "funfacts", "sun", "\"fun-facts\" om sun - Solen, luna - Månen og terra - Jorden")
@@ -38,9 +40,8 @@ func main() {
 
 	flag.Parse()
 
-
 	if out == "C" && isFlagPassed("F") {
-		return 
+		return CelsiusToFahrenheit
 	}
 	/**
 	    Her må logikken for flaggene og kall til funksjoner fra conv og funfacts

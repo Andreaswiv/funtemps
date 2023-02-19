@@ -39,29 +39,29 @@ func main() {
 
 	flag.Parse()
 
-	if out == "C" && isFlagPassed("F") {
-		fmt.Println("C er " + CelsiusToFahrenheit(fahr) + "F")
-	}
+	//if out == "C" && isFlagPassed("F") {
+	//fmt.Println("C er " + CelsiusToFahrenheit(fahr) + "F")
+	//}
 
-	if out == "F" && isFlagPassed("C") {
-		fmt.Println("F er " + FahrenheitToCelsius(cels) + "C")
-	}
+	//if out == "F" && isFlagPassed("C") {
+	//fmt.Println("F er " + FahrenheitToCelsius(cels) + "C")
+	//}
 
-	if out == "C" && isFlagPassed("K") {
-		fmt.Println("C er " + CelsiusToKelvin(kelv) + "K")
-	}
+	//if out == "C" && isFlagPassed("K") {
+	//fmt.Println("C er " + CelsiusToKelvin(kelv) + "K")
+	//}
 
-	if out == "K" && isFlagPassed("C") {
-		fmt.Println("K er " + KelvinToCelsius(cels) + "C")
-	}
+	//if out == "K" && isFlagPassed("C") {
+	//fmt.Println("K er " + KelvinToCelsius(cels) + "C")
+	//}
 
-	if out == "F" && isFlagPassed("K") {
-		fmt.Println("F er " + FahrenheitToKelvin(kelv) + "K")
-	}
+	//if out == "F" && isFlagPassed("K") {
+	//fmt.Println("F er " + FahrenheitToKelvin(kelv) + "K")
+	//}
 
-	if out == "K" && isFlagPassed("F") {
-		fmt.Println("K er " + KelvinToFahrenheit(fahr) + "F")
-	}
+	//if out == "K" && isFlagPassed("F") {
+	//fmt.Println("K er " + KelvinToFahrenheit(fahr) + "F")
+	//}
 	/**
 	    Her må logikken for flaggene og kall til funksjoner fra conv og funfacts
 	    pakkene implementeres.

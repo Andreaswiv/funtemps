@@ -3,7 +3,6 @@ package main
 import (
 	"flag"
 	"fmt"
-	"is105:github.com/andreaswiv/funtemps/conv"
 )
 
 // Definerer flag-variablene i hoved-"scope"
@@ -41,29 +40,29 @@ func main() {
 	flag.Parse()
 
 	if out == "C" && isFlagPassed("F") {
-		fmt.Println( value "C er " + CelsiusToFahrenheit(fahr) + "F")
+		fmt.Println("C er " + CelsiusToFahrenheit(fahr) + "F")
 	}
 
 	if out == "F" && isFlagPassed("C") {
-		fmt.Println( value "F er " + FahrenheitToCelsius(cels) + "C")
+		fmt.Println("F er " + FahrenheitToCelsius(cels) + "C")
 	}
 
 	if out == "C" && isFlagPassed("K") {
-		fmt.Println( value "C er " + CelsiusToKelvin(kelv) + "K")
+		fmt.Println("C er " + CelsiusToKelvin(kelv) + "K")
 	}
 
 	if out == "K" && isFlagPassed("C") {
-		fmt.Println( value "K er " + KelvinToCelsius(cels) + "C")
+		fmt.Println("K er " + KelvinToCelsius(cels) + "C")
 	}
 
 	if out == "F" && isFlagPassed("K") {
-		fmt.Println(value "F er " + FahrenheitToKelvin(kelv) + "K")
+		fmt.Println("F er " + FahrenheitToKelvin(kelv) + "K")
 	}
 
 	if out == "K" && isFlagPassed("F") {
-		fmt.Println(value "K er " + KelvinToFahrenheit(fahr) + "F")
+		fmt.Println("K er " + KelvinToFahrenheit(fahr) + "F")
 	}
-  	/**
+	/**
 	    Her må logikken for flaggene og kall til funksjoner fra conv og funfacts
 	    pakkene implementeres.
 

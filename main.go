@@ -3,6 +3,8 @@ package main
 import (
 	"flag"
 	"fmt"
+
+	"github.com/andreaswiv/funtemps/conv"
 )
 
 // Definerer flag-variablene i hoved-"scope"
@@ -38,30 +40,30 @@ func init() {
 func main() {
 
 	flag.Parse()
+	if out == "C" && isFlagPassed("F") {
+		fmt.Println((fahr), "F er ", conv.FahrenheitToCelsius(fahr), "C")
+	}
 
-	//if out == "C" && isFlagPassed("F") {
-	//fmt.Println("C er " + CelsiusToFahrenheit(fahr) + "F")
-	//}
+	if out == "F" && isFlagPassed("C") {
+		fmt.Println((cels), "C er ", conv.CelsiusToFahrenheit(cels), "F")
+	}
 
-	//if out == "F" && isFlagPassed("C") {
-	//fmt.Println("F er " + FahrenheitToCelsius(cels) + "C")
-	//}
+	if out == "C" && isFlagPassed("K") {
+		fmt.Println((kelv), "K er ", conv.KelvinToCelsius(kelv), "C")
+	}
 
-	//if out == "C" && isFlagPassed("K") {
-	//fmt.Println("C er " + CelsiusToKelvin(kelv) + "K")
-	//}
+	if out == "K" && isFlagPassed("C") {
+		fmt.Println((cels), "C er ", conv.CelsiusToKelvin(cels), "K")
+	}
 
-	//if out == "K" && isFlagPassed("C") {
-	//fmt.Println("K er " + KelvinToCelsius(cels) + "C")
-	//}
+	if out == "F" && isFlagPassed("K") {
+		fmt.Println((kelv), "K er ", conv.KelvinToFahrenheit(kelv), "F")
+	}
 
-	//if out == "F" && isFlagPassed("K") {
-	//fmt.Println("F er " + FahrenheitToKelvin(kelv) + "K")
-	//}
+	if out == "K" && isFlagPassed("F") {
+		fmt.Println((fahr), "F er ", conv.FahrenheitToKelvin(fahr), "K")
+	}
 
-	//if out == "K" && isFlagPassed("F") {
-	//fmt.Println("K er " + KelvinToFahrenheit(fahr) + "F")
-	//}
 	/**
 	    Her må logikken for flaggene og kall til funksjoner fra conv og funfacts
 	    pakkene implementeres.
@@ -86,20 +88,6 @@ func main() {
 	*/
 
 	// Her er noen eksempler du kan bruke i den manuelle testingen
-	fmt.Println(fahr, out, funfacts)
-
-	fmt.Println("len(flag.Args())", len(flag.Args()))
-	fmt.Println("flag.NFlag()", flag.NFlag())
-
-	fmt.Println(isFlagPassed("out"))
-
-	// Eksempel på enkel logikk
-	if out == "C" && isFlagPassed("F") {
-		// Kalle opp funksjonen FahrenheitToCelsius(fahr), som da
-		// skal returnere °C
-		fmt.Println("0°F er -17.78°C")
-	}
-
 }
 
 // Funksjonen sjekker om flagget er spesifisert på kommandolinje

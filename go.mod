@@ -1,3 +1,3 @@
-module github.com/andreaswiv/funtemps
+module github.com/Andreaswiv/funtemps
 
 go 1.20
